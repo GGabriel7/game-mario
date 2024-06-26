@@ -23,7 +23,7 @@ const loop = setInterval(() => {
         mario.style.animation = 'none';
         mario.style.bottom = `${marioPosition}px`;
         
-        mario.src = '../imagens/mariodeath.webp'
+        mario.src = '../imagens/mariomorto.png'
         mario.style.width = '70px'
 
         gameover.style.display = 'block'
