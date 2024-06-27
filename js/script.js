@@ -24,13 +24,28 @@ let jogoIniciado = false;
 function iniciarJogo() {
     if (!jogoIniciado) {
         jogoIniciado = true;
-        intervalo = setInterval(aumentarPontuacao, 2000); // Aumenta a pontuação a cada 2 segundos
+        intervalo = setInterval(aumentarPontuacao, 100); // Aumenta a pontuação a cada 2 segundos
     }
 }
 
 function aumentarPontuacao() {
-    pontuacao += 10;
+    pontuacao += 1;
     document.getElementById('result').textContent = pontuacao;
+
+    let comeca = document.querySelector('.comecar')
+    if (pontuacao > 120) {
+        comeca.style.animation = 'pipe-animation 1.5s infinite linear'
+    }
+    if (pontuacao > 240) {
+        comeca.style.animation = 'pipe-animation 1s infinite linear'
+    }
+    if (pontuacao > 480) {
+        comeca.style.animation = 'pipe-animation .5s infinite linear'
+    }
+
+    if (pontuacao > 960) {
+        comeca.style.animation = 'pipe-animation .25s infinite linear'
+    }
 }
 
 document.body.addEventListener('click', iniciarJogo);
@@ -59,13 +74,6 @@ const loop = setInterval(() => {
 
         mario.style.animation = 'none';
         mario.style.bottom = `${marioPosition}px`;
-        
-        mario.src = '../imagens/mariomorto.png'
-        if (tamanhoTela > 500) {  
-            mario.style.width = '100px'
-        } else {
-            mario.style.width = '50px'
-        }
 
         clearInterval(intervalo);
         document.getElementById('result').textContent = `SCORE: ${pontuacao}`;
@@ -77,6 +85,9 @@ const loop = setInterval(() => {
         clearInterval(loop)
     }
 }, 10);
+
+// VELOCIDADE
+
 
 // Reiniciar a Página
 const restart = document.getElementById('botao');
