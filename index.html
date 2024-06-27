@@ -6,17 +6,21 @@
     <title>Mario</title>
     <link rel="shortcut icon" href="imagens/cogumelo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/styleCel.css" media="screen and (max-width: 600px)">
+    <link rel="stylesheet" href="css/styleCel.css" media="screen and (max-width: 500px)">
 </head>
 <body>
-    <div class="game" onclick="jump()">
+    <div class="game" onclick="funcoes()">
+
+        <div id="result">0</div>
+
         <div class="gameover">
             <input type="button" value="TENTE NOVAMENTE" id="botao">
         </div>
 
         <img src="imagens/cloud.png" class="nuvem">
         <img src="imagens/mario.gif" class="mario" onkeyup="jump()">
-        <img src="imagens/pipe.png" class="pipe">
+        <img src="imagens/pipe.png" class="pipe" onkeyup="comecar()">
+
     </div>
 
     

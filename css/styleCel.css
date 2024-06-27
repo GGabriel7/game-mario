@@ -1,0 +1,18 @@
+.mario {
+    width: 50px;
+}
+
+.pipe {
+    width: 40px;
+    bottom: -65px;
+}
+
+@keyframes jump {
+    40% {
+        bottom: 90px;
+    }
+
+    60% {
+        bottom: 90px;
+    }
+}
