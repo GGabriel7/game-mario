@@ -8,10 +8,10 @@
 .game {
     position: relative;
     overflow: hidden;
-    height: 500px;
+    height: 100vh;
     margin: auto;
     background-image: linear-gradient(180deg, #b2e8ff, rgb(215, 243, 250));
-    border-bottom: 50px solid green;
+    border-bottom: 100px solid green;
 }
 
 .pipe {
